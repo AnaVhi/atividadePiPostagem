@@ -1,0 +1,27 @@
+#{extends 'main.html' /}
+#{set title:'Formulario' /}
+
+<h1>Cadastrar Nova Postagem</h1>
+
+<form action="@{Postagens.salvar}" method="post">
+
+    <label class="form-label">Título:</label>
+    <input class="form-control" type="text" name="a.titulo" placeholder="Digite o título da postagem" required />
+	<br>
+	
+    <label class="form-label">Conteúdo:</label>
+    <textarea class="form-control" name="a.conteudo" placeholder="Digite o conteúdo da postagem" required></textarea>
+	<br>
+	
+    <label class="form-label">Autor:</label>
+    <input class="form-control" type="text" name="a.autor" placeholder="Digite o nome do autor" required />
+	<br>
+	
+    <label class="form-label">Data:</label>
+    <input class="form-control" type="date" name="a.data" required />
+
+  <input class="btn btn-primary" type="submit" value="Salvar" />
+</form>
+
+
+

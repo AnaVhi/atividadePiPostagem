@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:'Lista' /}
+
+
+<h1>Lista de Postagem</h1>
+
+#{list items: lista, as:'a'}
+  <p><strong>${a.titulo}</strong></p>
+  <p>${a.conteudo}</p>
+  <p>Autor: ${a.autor} | Data: ${a.data}</p>
+  <p><a href="@{Postagens.remover(a.id)}" class="btn">Remover</a></p>
+#{/list}
+
+#{else}
+  <p>Nenhuma postagem cadastrada</p>
+#{/else}
+
+<p>
+  <a class="btn btn-primary" href="@{Postagens.form}">Cadastrar Novo</a>
+</p>
